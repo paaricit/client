@@ -1,0 +1,51 @@
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.order-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  select,
+  input {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 150px;
+  }
+
+  button {
+    padding: 6px 14px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background: #4338ca;
+    }
+  }
+}
+
+.order-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.order-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+  font-size: 0.95rem;
+
+  p {
+    margin: 0.4rem 0;
+  }
+}

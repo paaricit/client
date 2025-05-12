@@ -1,0 +1,35 @@
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid #eee;
+
+  .brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4f46e5;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .avatar {
+      background-color: #4f46e5;
+      color: #fff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.sidebar {
+  background-color: #fff;
+  height: 100vh;
+  padding: 24px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 240px;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f46e5;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: #444;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.2s;
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+
+      &.active {
+        background-color: #e0e7ff;
+        color: #3730a3;
+        font-weight: 600;
+      }
+    }
+  }
+}
