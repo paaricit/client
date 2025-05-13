@@ -1,5 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
+import { MOCK_ORDERS } from '../data/mock-order';
 
 @Injectable({ providedIn: 'root' })
 export class OrderService {
@@ -9,6 +11,7 @@ export class OrderService {
   constructor(private http: HttpClient) {}
 
   load() {
+    of(MOCK_ORDERS)
     this.http.get<any[]>('http://localhost:3000/api/orders')
       .subscribe(data => this.orders.set(data));
   }

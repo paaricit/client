@@ -6,7 +6,7 @@ import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-orders',
-  imports: [NgFor, NgIf, FormsModule],
+  imports: [NgFor, FormsModule],
 
   styleUrls: ['./orders.component.scss'],
   template: `
@@ -55,9 +55,9 @@ export class OrdersComponent implements OnInit {
       quantity: this.quantity,
     };
 
-    this.orderService.placeOrder(newOrder).subscribe((res: any) => {
-      this.orderService.addToList({ ...newOrder, ...res, status: 'pending' });
-      this.quantity = 1;
-    });
+    // this.orderService.placeOrder(newOrder).subscribe((res: any) => {
+    this.orderService.addToList({ ...newOrder, ...newOrder, status: 'pending' });
+    this.quantity = 1;
+    // });
   }
 }
