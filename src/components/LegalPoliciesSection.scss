@@ -1,0 +1,109 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.legal-policies-section {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  background: #181828;
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px 0 rgba(28, 112, 218, 0.07);
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .policies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .policy-card {
+    background: #fff;
+    color: #13131D;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(30,30,50,0.10);
+    box-shadow: 0 8px 32px 0 rgba(110, 68, 255, 0.10);
+    border-radius: 14px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    will-change: transform;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 260px;
+    min-width: 220px;
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #13131D;
+      margin-bottom: 0.7rem;
+    }
+    p {
+      color: #13131D;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      flex: 1;
+      opacity: 0.85;
+    }
+    .read-more-link {
+      color: #FFA800;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.policy-card:hover {
+  box-shadow: 0 16px 48px 0 rgba(110, 68, 255, 0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+
+// Add fade-in animation
+.legal-policies-section, .policy-card {
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include respond-to(md) {
+  .legal-policies-section {
+    padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+    h2 {
+      font-size: 1.2rem;
+    }
+    .policies-list {
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: center;
+    }
+    .policy-card {
+      max-width: 98vw;
+      min-width: 0;
+      width: 100%;
+      padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+  }
+} 

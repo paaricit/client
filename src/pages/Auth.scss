@@ -1,0 +1,82 @@
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1C70DA 0%, #1557B0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(30, 30, 50, 0.13), 0 2px 8px 0 rgba(28,112,218,0.08);
+  padding: 2.5rem 2.2rem 2.2rem 2.2rem;
+  max-width: 410px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.auth-form .chakra-form__label {
+  font-weight: 600;
+  color: #1C70DA;
+  margin-bottom: 0.3rem;
+}
+
+.auth-form .chakra-input {
+  background: #F8F9FA;
+  border-radius: 0.6rem;
+  border: 1.5px solid #E9ECEF;
+  font-size: 1rem;
+  padding: 1.1rem 1rem;
+  color: #222;
+  transition: border-color 0.2s;
+}
+
+.auth-form .chakra-input:focus {
+  border-color: #1C70DA;
+  box-shadow: 0 0 0 2px rgba(28,112,218,0.13);
+}
+
+.auth-link {
+  color: #1C70DA;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+  margin-left: 0.2rem;
+}
+
+.auth-link:hover {
+  color: #FF6B35;
+}
+
+.chakra-heading {
+  letter-spacing: -0.5px;
+}
+
+.chakra-text {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    border-radius: 1rem;
+    max-width: 98vw;
+    margin: 0;
+  }
+  .auth-page {
+    padding: 0.5rem 0;
+  }
+} 
